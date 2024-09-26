@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Milão</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Milão</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a></p>
+
+            <img src="images/milao.png" alt="Milão">
+        </nav>
+    </header>
+    <main>
+        <h2>Quizz</h2>
+        <form>
+            <fieldset>
+                <pre>
+  <label for="nome">Nome:</label> 
+  <input type="text" name="nome" id="nome" autocomplete="on">
+  <label for="apelido">Apelido:</label>
+  <input type="text" name="apelido" id="apelido" autocomplete="on">
+  <label for="email">Email:</label>
+  <input type="text" name="email" id="email" autocomplete="on">
+  <input type="submit" value="Submit">
+            </pre>
+            </fieldset>
+            <fieldset>
+                <legend>Cultura de Milão</legend>
+                <label for="prato-favorito">Qual é o seu prato típico de Milão favorito?</label>
+                <input type="text" id="prato-favorito" name="prato-favorito" placeholder="Insira o nome do prato"
+                    maxlength="100" required>
+
+                    <p> Qual desses monumentos está localizado em Milão?<br>
+                    <input type="radio" id="duomo" name="monumento" value="Duomo" required>
+                    <label for="duomo">Duomo de Milão</label><br>
+                    <input type="radio" id="coliseu" name="monumento" value="Coliseu">
+                    <label for="coliseu">Coliseu de Roma</label><br>
+                    <input type="radio" id="torre" name="monumento" value="Torre">
+                    <label for="torre">Torre de Pisa</label>  
+                    </p>  
+
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>DIW 2024</p>
+    </footer>
+</body>
+
+</html>
