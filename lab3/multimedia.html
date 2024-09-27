@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <title>Milão</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <header>
-            <h1>Milão</h1>
-            <nav>
-                  <a href="index.html">Home</a>
-                  <a href="local.html">Localização</a>
-                  <a href="multimedia.html">Multimédia</a>
-                  <a href="info.html">Informação</a>
-                  <a href="quizz.html">Quizz</a>
-                <a href="viagem.html">Viagem</a></p>
-                  <img src="images/milao.png" alt="Milão">
-              </nav>
-        </header>
-        <main>
-            <h2>Multimédia</h2>
-            <p>
-                <a href="#fotografias">Fotografias</a>
-                <a href="#video">Vídeo</a>
-                <a href="#poema">Poema</a>
-            </p>
-            <h3 id="fotografia">Fotografias</h3>
-            <a href="images/milao_grande.png" target="_blank">
-                <img src="images/milao_pequena.png" alt="Milão" width="120" height="80">
-              </a>
-              <a href="images/milao2_grande.png" target="_blank">
-                <img src="images/milao2_pequena.png" alt="Milão" width="120" height="80">
-              </a>
-              <a href="images/milao3_grande.png" target="_blank"></a>
-                <img src="images/milao3_pequena.png" alt="Milão" width="120" height="80">
-              </a>
-              <h3 id="video">Vídeo</h3>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Cjf1UIYDEds?si=InzovwUoLihVI0TC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <h3 id="poema">Poema</h3>
-              <pre>                       <b>Milão</b>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Milão</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Milão</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="local.html">Localização</a>
+      <a href="multimedia.html">Multimédia</a>
+      <a href="info.html">Informação</a>
+      <a href="quizz.html">Quizz</a>
+      <a href="viagem.html">Viagem</a></p>
+      <img src="images/milao.png" alt="Milão">
+    </nav>
+  </header>
+  <main>
+    <h2>Multimédia</h2>
+    <p>
+      <a href="#fotografias">Fotografias</a>
+      <a href="#video">Vídeo</a>
+      <a href="#poema">Poema</a>
+    </p>
+    <h3 id="fotografia">Fotografias</h3>
+    <a href="images/milao_grande.png" target="fotoframe">
+      <img src="images/milao_pequena.png" alt="Milão" width="120" height="80">
+    </a>
+    <a href="images/milao2_grande.png" target="fotoframe">
+      <img src="images/milao2_pequena.png" alt="Milão" width="120" height="80">
+    </a>
+    <a href="images/milao3_grande.png" target="fotoframe">
+    <img src="images/milao3_pequena.png" alt="Milão" width="120" height="80">
+    </a>
+    <iframe name="fotoframe" width="600" height="400" style="display: block; margin-top: 20px;border: 0px;"></iframe>
+    <h3 id="video">Vídeo</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Cjf1UIYDEds?si=InzovwUoLihVI0TC"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3 id="poema">Poema</h3>
+    <pre>                       <b>Milão</b>
 
                 Milão, cidade de histórias e luz,
                 De catedrais que tocam o céu azul,
@@ -55,9 +61,10 @@
                 Da Vinci sorri, e o futuro se instinta,
                 Na mistura de beleza e vigor.
             </pre>
-        </main>
-        <footer>
-            <p>DIW 2024</p>
-        </footer>
-    </body>
+  </main>
+  <footer>
+    <p>DIW 2024</p>
+  </footer>
+</body>
+
 </html>
