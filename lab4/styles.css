@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    background-color: rgb(132, 87, 87);
+    font-style: italic;
+    font-size: 100px;
+    text-align: center;
+    color: white
+}
+
+nav {
+    background-color: rgb(195, 151, 134);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+a:hover{
+    color: white;
+}
+
+img{
+    border-radius: 15px ;
+}
+
+div{
+    padding-left: 18px;
+    padding-top: 15px;
+    padding-right: 18px;
+    text-align: center;
+}
+body{
+    background-color: rgb(238, 217, 194);
+} 
+
+fieldset{
+    background-color: rgb(245, 217, 194);
+}
+
+label{
+    color: black;
+}
+
+input{
+    background-color: white;
+    border: 2px solid ;
+    color: rgb 139,69,19 ;
+}
+
+main{
+    background-color: rgb(195, 151, 134);
+    margin-left: 500px;
+    margin-right: 500px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+
+footer{
+    background-color:rgb(195, 151, 134) ;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 85px;
+    position:relative;
+}
+
+pre {
+ font-size: 120%;
+}
