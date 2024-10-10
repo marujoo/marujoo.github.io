@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milão</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Milão</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+            <a href="pontosinteresse.html">Pontos de Interesse</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Quizz</h2>
+        <form method="get" action="https://postman-echo.com/get">
+            <fieldset>
+                <p>Dados Pessoais</p>
+                <pre>
+                
+  <label for="nome">Nome:</label> 
+  <input type="text" name="nome" id="nome" autocomplete="on">
+  <label for="apelido">Apelido:</label>
+  <input type="text" name="apelido" id="apelido" autocomplete="on">
+  <label for="email">Email:</label>
+  <input type="text" name="email" id="email" autocomplete="on">
+  <input type="submit" value="Submit">
+            </pre>
+            </fieldset>
+            <fieldset>
+                <p>Cultura de Milão</p>
+                <label for="prato-favorito">Qual é o seu prato típico de Milão favorito?</label>
+                <input type="text" id="prato-favorito" name="prato-favorito" placeholder="Insira o nome do prato"
+                    maxlength="100" required>
+
+                <p> Qual destes monumentos está localizado em Milão?<br>
+                    <input type="radio" id="duomo" name="monumento" value="Duomo" required>
+                    <label for="duomo">Duomo de Milão</label><br>
+                    <input type="radio" id="coliseu" name="monumento" value="Coliseu">
+                    <label for="coliseu">Coliseu de Roma</label><br>
+                    <input type="radio" id="torre" name="monumento" value="Torre">
+                    <label for="torre">Torre de Pisa</label>
+                </p>
+
+                <p> Selecione os pratos típicos que já experimentou em Milão:<br>
+                    <input type="checkbox" id="risotto" name="pratos[]" value="Risotto alla Milanese">
+                    <label for="risotto">Risotto alla Milanese</label><br>
+                    <input type="checkbox" id="cotoletta" name="pratos[]" value="Cotoletta alla Milanese">
+                    <label for="cotoletta">Cotoletta alla Milanese</label><br>
+                    <input type="checkbox" id="ossobuco" name="pratos[]" value="Ossobuco">
+                    <label for="ossobuco">Ossobuco</label>
+                </p>
+
+                <p>
+                    <label for="data">Em que ano foi inaugurado o Duomo de Milão?</label>
+                    <input type="date" id="data" name="data" required>
+                </p>
+
+                <p>
+                    <label for="hora"> A que horas abre a famosa Galleria Vittorio Emanuele II?</label>
+                    <input type="time" id="hora" name="hora" required>
+                </p>
+
+                <p>
+                    <label for="populacao">Qual é a população estimada de Milão (em milhões)?</label>
+                    <input type="number" id="populacao" name="populacao" min="1" max="10" step="0.1" value="1.3"
+                        required>
+                </p>
+
+                <p>
+                    <label for="exploracao">Qual a melhor maneira de explorar Milão</label>
+                    <select id="exploracao" name="exploracao" required>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="gondola">gôndola</option>
+                        <option value="vespa">vespa</option>
+                        <option value="pe">a pé</option>
+                        <option value="patins">patins</option>
+                        <option value="cavalo">cavalo</option>
+                        <option value="carro">carro</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="evento">Se pudesse participar de um evento único em Milão, qual seria?</label>
+                    <input type="text" id="evento" name="evento" list="eventos-milao"
+                        placeholder="Escolha ou escreva o evento" required>
+                    <datalist id="eventos-milao">
+                        <option value="Semana de Moda de Milão">
+                        <option value="Grande Prémio de Fórmula 1 em Monza">
+                        <option value="Milão Design Week">
+                        <option value="Festival de Música ao Ar Livre no Duomo">
+                        <option value="Carnaval Ambrosiano">
+                    </datalist>
+                </p>
+
+                <p>
+                    <label for="preferencia">Escolha a cor do melhor clube de Milão:</label>
+                    <input type="color" id="preferencia" name="preferencia" value="#00BFFF" required>
+                </p>
+
+                <p>
+                    <label for="experiencia">Descreva a sua experiência favorita em Milão:</label>
+                    <textarea id="experiencia" name="experiencia" placeholder="Escreva aqui..."
+                        maxlength="500"></textarea>
+                </p>
+
+                <p>
+                    <label for="nivel">Numa escala de 0 a 10 quão bonito é o Ronaldo</label>
+                    <input type="range" id="nivel" name="nivel" min="0" max="10" step="1" value="5">
+                </p>
+
+                <p>
+                    <label for="submit-image">Envie seu quizz clicando na imagem abaixo:</label><br>
+                    <input type="image" src="images/clica.jpg" alt="Enviar Quizz" id="submit-image" name="submit">
+                </p>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset Quizz">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>DIW 2024</p>
+    </footer>
+</body>
+
+</html>

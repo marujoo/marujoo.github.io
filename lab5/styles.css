@@ -11,12 +11,38 @@ h1 {
     color: white
 }
 
+.caixatitulo h2{
+    padding-bottom: 15px;
+
+}
+.caixatitulo{
+    padding: 5px 0px 20px 20px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: rgb(195, 151, 134);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+
+}
+.caixalistaordenada{
+    background-color: rgb(195, 151, 134);
+    border-radius: 15px;
+    padding-top: 30px;
+    margin-top: 10px;
+    padding: 30px 30px 30px 30px;
+}
 nav {
     background-color: rgb(195, 151, 134);
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.navponto{
+    margin-bottom: 10px;
+}
+
+
 a{
     color: black;
     text-decoration: none;
@@ -55,19 +81,24 @@ input{
     border: 2px solid ;
     color: rgb 139,69,19 ;
 }
+
 h1{
     font-style: italic;
 }
 
 main{
     background-color: rgb(195, 151, 134);
-    margin-left: 460px;
-    margin-right: 460px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px 20px 20px 20px;
     text-align: center;
     margin-top: 10px;
     border-radius: 20px;
     font-size: 20px;
     margin-bottom: 100px;
+}
+.mainponto{
+    background-color: rgb(245, 217, 194);
 }
 
 
@@ -82,7 +113,7 @@ footer{
     position:fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    right: 0;
 }
 
 pre {

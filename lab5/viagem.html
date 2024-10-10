@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milão</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Milão</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+            <a href="pontosinteresse.html">Pontos de Interesse</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Viagem</h2>
+
+        <form>
+            <fieldset>
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required><br>
+                </p>
+                <label for="apelido">Apelido:</label>
+                <input type="text" id="apelido" name="apelido" placeholder="Insira seu apelido" required><br>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ronaldo@gmail.com" required><br>
+                </p>
+                <label for="datapartida">Data de partida:</label>
+                <input type="date" id="datapartida" name="datapartida" required><br>
+                <p>
+                    <label for="dataregresso">Data de regresso:</label>
+                    <input type="date" id="dataregresso" name="dataregresso" required><br>
+                </p>
+                <label for="passageiros">Número de passageiros:</label>
+                <input type="number" id="passageiros" name="passageiros" min="1" max="20" required><br>
+                <p>
+                    <label for="transporte">Meio de transporte favorito:</label>
+                    <select id="transporte" name="transporte" required>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="carro">Carro</option>
+                        <option value="comboio">Comboio</option>
+                        <option value="aviao">Avião</option>
+                        <option value="navio">Navio</option>
+                        <option value="autocarro">Autocarro</option>
+                    </select><br>
+                </p>
+                <p>
+                    <label for="servico">Serviço desejado:</label><br>
+                    <input type="radio" id="basico" name="servico" value="basico" required>
+                    <label for="basico">Básico</label><br>
+                    <input type="radio" id="premium" name="servico" value="premium">
+                    <label for="premium">Premium</label><br>
+                </p>
+                <p>
+                    <label for="pedidos">Pedidos especiais:</label>
+                    <textarea id="pedidos" name="pedidos" placeholder="Insira aqui seus pedidos especiais..."
+                        rows="4"></textarea><br>
+                </p>
+                <p>
+                    <label for="valor">Qual o valor que espera gastar por pessoa e por dia (em euros)?</label>
+                    <input type="number" id="valor" name="valor" min="0" step="1" placeholder="Insira o valor em euros"
+                        required><br>
+                </p>
+            </fieldset>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+    <footer>
+        <p>DIW 2024</p>
+    </footer>
+</body>
+
+</html>
