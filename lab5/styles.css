@@ -2,9 +2,12 @@
     margin: 0px;
     padding: 0px;
 }
+.cidade {
+    text-transform: uppercase; 
+}
 
 h1 {
-    background-color: rgb(94, 56, 56);
+    background-color: rgb(79, 42, 42);
     font-style: italic;
     font-size: 100px;
     text-align: center;
@@ -15,8 +18,22 @@ h2 {
     color: white;
 }
 
+h7{
+    font-size: 30px;
+}
 
+hr {
+    border: none;         
+    height: 2px;          
+    background-color: white;  
+    margin: 20px auto;   
+    width: 75%;    
+    
+}
 
+.caixagrande{
+    background-color: rgb(79, 42, 42);
+}
 .caixatitulo h2{
     padding-bottom: 15px;
 
@@ -25,19 +42,133 @@ h2 {
     padding: 5px 0px 20px 20px;
     margin-left: 0;
     margin-right: 0;
-    background-color: rgb(195, 151, 134);
+    background-color: rgb(37, 35, 34);
     border-radius: 15px;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
 
 }
 .caixalistaordenada{
-    background-color: rgb(195, 151, 134);
+    background-color: rgb(37, 35, 34);
     border-radius: 15px;
     padding-top: 30px;
     margin-top: 10px;
     padding: 30px 30px 30px 30px;
 }
+
+.caixalistaordenada ol li:nth-child(1) {
+    color: rgb(221, 164, 148); 
+}
+
+.caixalistaordenada ol li:nth-child(2) {
+    color: rgb(213, 206, 153); 
+}
+
+.caixalistaordenada ol li:nth-child(3) {
+    color: rgb(221, 164, 148); 
+}
+
+.caixalistaordenada ol li:nth-child(4) {
+    color: rgb(213, 206, 153); 
+}
+
+.caixalistaordenada ol li:nth-child(5) {
+    color: rgb(221, 164, 148); 
+}
+
+.caixalistanaordenada ul li:nth-child(1) {
+    color: rgb(221, 164, 148); 
+}
+
+.caixalistanaordenada ul li:nth-child(2) {
+    color: rgb(213, 206, 153); 
+}
+
+.caixalistanaordenada ul li:nth-child(3) {
+    color: rgb(221, 164, 148); 
+}
+
+.caixalistanaordenada ul li:nth-child(4) {
+    color: rgb(213, 206, 153); 
+}
+
+.caixalistanaordenada ul li:nth-child(5) {
+    color: rgb(221, 164, 148); 
+}
+
+.caixalistanaordenada{
+    background-color: rgb(37, 35, 34);
+    border-radius: 15px;
+    padding-top: 30px;
+    margin-top: 10px;
+    padding: 30px 30px 30px 30px;
+}
+
+
+.caixalistaordenada ol {
+    list-style-position: inside;
+    padding-left: 360px; 
+    text-align: left;
+    list-style-type: upper-roman;
+}
+
+
+.caixalistanaordenada ul {
+    list-style-position: inside;
+    padding-left: 360px; 
+    list-style-type: square;
+    text-align: left;
+}
+
+.caixalistaordenada li,
+.caixalistanaordenada li {
+    font-size: 2em; 
+}
+
+
+.melhorlocalfoto{
+    background-color: rgb(37, 35, 34);
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 30px 30px 30px 30px;
+    font-size: 30px;
+}
+
+.melhoralturavisitar{
+    background-color: rgb(37, 35, 34);
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 30px 30px 30px 30px;
+}
+
+.tabela table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    color: black;
+}
+
+
+.tabela th {
+    background-color: rgb(79, 42, 42); 
+    color: white; 
+}
+
+.tabela tbody tr:nth-child(odd) {
+    background-color: rgb(221, 164, 148); 
+}
+
+
+.tabela tbody tr:nth-child(even) {
+    background-color: #ffffff; 
+}
+
+.tabela td, .tabela th {
+    padding: 15px; 
+}
+
+
 nav {
     background-color: rgb(8, 8, 8);
     text-align: center;
@@ -46,6 +177,8 @@ nav {
 }
 .navponto{
     margin-bottom: 10px;
+    border-radius: 15px;
+    margin: 0px 100px 0px 100px;
 }
 
 
@@ -83,11 +216,13 @@ body{
 }
 
 fieldset{
-    background-color: rgb(245, 217, 194);
+    background-color: rgb(63, 59, 59);
+    border: 0px;
+    color: white;
 }
 
 label{
-    color: black;
+    color: white;
 }
 
 input{
@@ -96,9 +231,28 @@ input{
     color: rgb 139,69,19 ;
 }
 
+iframe{
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.info{
+    text-align: left;
+    padding-left: 150px;
+}
+
+.tabelainfo{
+    padding: 20px 300px 30px 300px;
+}
+
+#video{
+    margin-top: 50px;
+}
 
 main{
     background-color: rgb(63, 59, 59);
+    color: white;
     margin-left: 50px;
     margin-right: 50px;
     padding: 20px 20px 20px 20px;
@@ -112,7 +266,7 @@ main{
 }
 
 .mainponto{
-    background-color: rgb(245, 217, 194);
+    background-color: rgb(79, 42, 42);
 }
 
 .linksmultimedia{
@@ -151,9 +305,35 @@ main{
     text-align: left;
 }
 
+#melhorlocalfoto {
+    font-size: 30px;
+    padding: 10px 100px 20px 100px;
+}
+
+#melhoralturavisitar {
+    padding: 10px 100px 20px 100px;
+    font-size: 30px;
+}
+
+#restaurantes {
+    font-size: 30px;
+    padding: 10px 100px 20px 100px;
+}
+
+#monumentos {
+    padding: 10px 100px 20px 100px;
+    font-size: 30px;
+}
+
+#locaisnaoperder {
+    padding: 10px 100px 20px 100px;
+    font-size: 30px;
+}
+
+
 
 footer{
-    background-color:rgb(94, 56, 56) ;
+    background-color:rgb(79, 42, 42) ;
     color: white;
     text-align: center;
     font-weight: bold;
