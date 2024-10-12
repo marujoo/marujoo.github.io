@@ -4,12 +4,18 @@
 }
 
 h1 {
-    background-color: rgb(132, 87, 87);
+    background-color: rgb(94, 56, 56);
     font-style: italic;
     font-size: 100px;
     text-align: center;
     color: white
 }
+
+h2 {
+    color: white;
+}
+
+
 
 .caixatitulo h2{
     padding-bottom: 15px;
@@ -33,7 +39,7 @@ h1 {
     padding: 30px 30px 30px 30px;
 }
 nav {
-    background-color: rgb(195, 151, 134);
+    background-color: rgb(8, 8, 8);
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -44,18 +50,20 @@ nav {
 
 
 a{
-    color: black;
+    color: white;
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 20px;
 }
 a:hover{
-    color: white;
+    color: rgb(132, 87, 87);
 }
 
 img{
     border-radius: 15px ;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 div{
@@ -64,9 +72,15 @@ div{
     padding-right: 18px;
     text-align: center;
 }
+
 body{
-    background-color: rgb(238, 217, 194);
-} 
+    background-color: rgb(37, 35, 34);
+}
+
+.loctext{
+    color: white;
+    padding: 20px 50px 50px 20px;
+}
 
 fieldset{
     background-color: rgb(245, 217, 194);
@@ -82,31 +96,68 @@ input{
     color: rgb 139,69,19 ;
 }
 
-h1{
-    font-style: italic;
-}
 
 main{
-    background-color: rgb(195, 151, 134);
+    background-color: rgb(63, 59, 59);
     margin-left: 50px;
     margin-right: 50px;
     padding: 20px 20px 20px 20px;
     text-align: center;
     margin-top: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
     border-radius: 20px;
     font-size: 20px;
     margin-bottom: 100px;
 }
+
 .mainponto{
     background-color: rgb(245, 217, 194);
 }
 
+.linksmultimedia{
+    background-color: black;
+    width: fit-content;
+    border-radius: 15px;
+    padding-bottom: 15px;
+    margin: 20px auto;
+}
+
+#fotografia{
+    color: white;
+    padding-bottom: 20px;
+}
+
+#poema {
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.poema1 {
+    color: white;
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    width: fit-content;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.quadra {
+    margin-bottom: 20px;
+    text-align: left;
+}
 
 
 footer{
-    background-color:rgb(195, 151, 134) ;
+    background-color:rgb(94, 56, 56) ;
+    color: white;
     text-align: center;
-    padding-top: 30px;
+    font-weight: bold;
+    padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
