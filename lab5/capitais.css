@@ -9,7 +9,7 @@ header {
     top: 0;
     background-color: rgb(79, 42, 42);
     color: white;
-    padding: 15px;
+    padding: 2vh;
     display: flex; 
     justify-content: space-between; 
     align-items: center; /
@@ -22,22 +22,50 @@ h1{
 
 nav{
     display: flex;
+    font-size: 20px;
     
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px;
-    text-align: right;
+header nav a {
+    padding: 20px; 
+    text-decoration: none; 
+    color: white; 
+    transition: background-color 0.3s; 
 }
 
-nav a:hover {
-    background-color: #555;
+header nav a:visited {
+    color: white; 
 }
 
-nav a:last-child {
-    background-color: #8d6a65; 
-    color: white;
+header nav a:hover {
+    background-color: #4d4747; 
+    color: red; 
+}
+
+header nav a:active {
+    color: #cb6654; 
+}
+
+article {
+    background-color: #e0f7fa; /* Cor de fundo do artigo */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Direção vertical */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100vw; /* Largura total da viewport */
+    height: 50vh; /* Altura de 50% da viewport */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.poema {
+    font-size: 18px; /* Tamanho da fonte do poema */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 15px; /* Espaço abaixo do poema */
+}
+
+.autor {
+    font-weight: bold; /* Fonte em negrito para o autor */
+    font-style: italic; /* Fonte em itálico para o autor */
+    font-size: 16px; /* Tamanho da fonte do autor */
 }
