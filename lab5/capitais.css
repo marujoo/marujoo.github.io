@@ -4,6 +4,10 @@
     box-sizing: border-box; 
 }
 
+body {
+    overflow-x: hidden; /* evita scroll horizontal */
+}
+
 header {
     position: sticky;
     top: 0;
@@ -12,7 +16,7 @@ header {
     padding: 2vh;
     display: flex; 
     justify-content: space-between; 
-    align-items: center; /
+    align-items: center; 
 }
 
 h1{
@@ -46,8 +50,8 @@ header nav a:active {
     color: #cb6654; 
 }
 
-article {
-    background-color: #eddcdc; 
+#poema {
+    background-color: rgb(167, 112, 112); 
     display: flex; 
     flex-direction: column; /* direcao vertical */
     justify-content: center; /* centraliza verticalmente */
@@ -58,13 +62,143 @@ article {
 }
 
 .poema {
-    font-size: 18px; /* Tamanho da fonte do poema */
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 15px; /* Espaço abaixo do poema */
+    font-size: 18px; 
+    text-align: center; 
+    margin-bottom: 15px; 
 }
 
 .autor {
-    font-weight: bold; /* Fonte em negrito para o autor */
-    font-style: italic; /* Fonte em itálico para o autor */
-    font-size: 16px; /* Tamanho da fonte do autor */
+    font-weight: bold; 
+    font-style: italic; 
+    font-size: 16px; 
 }
+
+#paisagens {
+    position: relative;
+    overflow: hidden;
+    width: 100%;  
+    height: 100vh;
+}
+
+#paisagens img {
+    height: 100vh;
+    width: 100%;
+}
+
+#paisagens p a {
+    color: white;
+    text-decoration: none;
+}
+
+#paisagens p {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#cidades {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    background-color: rgb(167, 112, 112);
+    padding: 20px; 
+}
+
+#cidades section {
+    display: flex;
+    flex-direction: row;
+    width: 20%; 
+    height: 70px;
+    margin: 10px; 
+    background-color: #f0e6e6;
+    border-radius: 20px;
+    overflow: hidden; /* conteudo nao transborda */
+}
+
+#cidades img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* ajusta se ao espaco */
+}
+
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;  
+}
+
+#cidades section:hover {
+    background-color: #e0d5d5;
+}
+
+#cidades div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #222222;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#experimenta {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100px;
+    background-color: rgb(167, 112, 112); 
+    position: relative; 
+}
+
+.caixa {
+    display: flex;
+    position: relative; 
+    padding-bottom: 10px;
+}
+
+
+.circle {
+    width: 100px; 
+    height: 100px; 
+    background-color: black; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.5em; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+}
+
+
+.caixa:hover .circle {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+
+.circle:hover {
+    background-color: #de1b1b; 
+}
+
+
+footer{
+    background-color: rgb(79, 42, 42);
+    color: white;
+    padding: 20px;
+    position: relative;
+    width: 100vw;
+    text-align: center;
+}
+
+
