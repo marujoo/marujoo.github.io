@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Noto Serif', serif;
 }
 .cidade {
     text-transform: uppercase; 
@@ -355,4 +356,8 @@ footer{
 
 pre {
  font-size: 120%;
+}
+
+.zoom {
+    cursor: zoom-in;
 }
