@@ -47,15 +47,14 @@ header nav a:active {
 }
 
 article {
-    background-color: #e0f7fa; /* Cor de fundo do artigo */
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Direção vertical */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    width: 100vw; /* Largura total da viewport */
-    height: 50vh; /* Altura de 50% da viewport */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
+    background-color: #eddcdc; 
+    display: flex; 
+    flex-direction: column; /* direcao vertical */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center; /* centraliza horizontalmente */
+    width: 100vw; /* larg total da viewport */
+    height: 50vh; /* alt de 50% da viewport */
+    padding: 20px; 
 }
 
 .poema {
