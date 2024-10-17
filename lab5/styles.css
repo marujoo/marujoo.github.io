@@ -7,6 +7,11 @@
     text-transform: uppercase; 
 }
 
+.using {
+    background-color: #2a0505;
+    border-radius: 15px;
+}
+
 h1 {
     background-color: rgb(79, 42, 42);
     font-style: italic;
