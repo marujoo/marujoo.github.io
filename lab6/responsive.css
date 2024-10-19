@@ -1,0 +1,158 @@
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+aside {grid-area: aside;}
+footer {grid-area: footer;}
+
+body {
+    font-family: 'Noto Serif', serif;
+    background-color: rgb(37, 35, 34);
+}
+
+/* Grid Layout para o main */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* uma coluna por padrão */
+    gap: 20px; /* espaçamento entre os elementos */
+    padding: 20px;
+    margin: 0 50px;
+}
+
+/* Adicionar uma classe para os asides */
+.fotosheader {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) { /* Tablets e dispositivos móveis */
+    main {
+        grid-template-columns: 1fr; /* uma coluna em dispositivos menores */
+        margin: 40px auto;
+    }
+
+    .fotosheader {
+        display: flex; /* Usa Flexbox para centralizar as imagens */
+        justify-content: center; /* Centraliza as imagens horizontalmente */
+        flex-direction: column; /* Coloca as imagens em uma coluna */
+        align-items: center; /* Centraliza as imagens verticalmente */
+        gap: 20px; /* Aumenta o espaçamento entre as imagens */
+        margin: 20px 0; /* Aumenta o espaçamento entre o aside e o main */
+    }
+
+    .fotosheader img {
+        max-width: 100%; /* Garante que as imagens sejam responsivas */
+        height: auto; /* Mantém a proporção das imagens */
+    }
+
+    .menubtn { 
+        font-size: 40px;
+        border: none;
+        color: white;
+        padding: 6px;
+        padding-left: 10px;
+        background-color: inherit;
+        margin: 0;
+        cursor: pointer;
+        display: inline-block; 
+        transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+    }
+    
+
+    nav {
+        background-color: rgb(52, 49, 49);
+        padding: 15px;
+        text-align: left;
+    }
+
+    
+    .menuconteudo {
+        display: none; /* Começa escondido */
+        position: absolute;
+        left: 0; 
+        background-color: rgb(52, 49, 49);
+        z-index: 1;
+    }
+    
+    .menuconteudo a {
+        color: rgb(246, 1, 1);
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .menuconteudo a:hover {
+        background-color: rgb(80, 80, 80); /* Muda a cor de fundo ao passar o mouse */
+        color: rgb(208, 40, 40); /* Muda a cor do texto ao passar o mouse */
+    }
+    
+    .menubtn:hover {
+        background-color: rgb(80, 80, 80); /* Cor do botão ao passar o mouse */
+        color: rgb(246, 1, 1); /* Muda a cor do texto do botão ao passar o mouse */
+    }
+    
+    .menubtn:hover + .menuconteudo,
+    .menuconteudo:hover { /* Modificado para que o menu permaneça visível ao passar o mouse sobre ele */
+        display: block;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Portrait */
+    h1 {
+        font-size: 40px; /* tamanho do texto em telas pequenas */
+    }
+
+    h2, h7 {
+        font-size: 20px; /* reduzindo o tamanho do texto */
+    }
+
+    /* Outros ajustes conforme necessário */
+    /* Exemplo: Reduzir o padding e margin para pequenos dispositivos */
+    main {
+        padding: 10px;
+    }
+
+    img {
+        width: 100%; /* imagens responsivas */
+        height: auto;
+    }
+
+    /* Ajuste dos links e botões */
+    a {
+        font-size: 16px; /* tamanho do texto dos links */
+        padding: 5px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) { /* Laptops */
+    h1 {
+        font-size: 60px; /* tamanho do texto em telas médias */
+    }
+}
+
+@media (min-width: 2560px) { /* 4K */
+    h1 {
+        font-size: 120px; /* tamanho do texto para telas 4K */
+    }
+
+    main {
+        margin: 0 auto; /* centralizar o main */
+        max-width: 1200px; /* largura máxima para o main */
+    }
+}

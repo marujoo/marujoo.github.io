@@ -231,7 +231,7 @@ fieldset{
     border: 0px;
     color: white;
     text-align: left;  
-    padding-left: 300px;
+    padding-left: 200px;
 }
 
 textarea {
@@ -254,13 +254,24 @@ iframe{
     margin-top: 30px;
 }
 
-.info{
+/*.info{
     text-align: left;
     padding-left: 150px;
 }
 
 .tabelainfo{
     padding: 20px 300px 30px 300px;
+}*/
+.tabelainfo {
+    margin: 20px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */
+    width: 80%; /* Define a largura desejada */
+    text-align: center; /* Centraliza o texto dentro da tabela */
+}
+
+.info {
+    margin: 20px auto; /* Adiciona espaçamento vertical e centraliza horizontalmente */
+    width: 80%; /* Define a largura desejada */
+    text-align: center; /* Centraliza o texto dentro da div */
 }
 
 #video{
@@ -358,7 +369,6 @@ footer{
     padding-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    position:fixed;
     bottom: 0;
     left: 0;
     right: 0;
