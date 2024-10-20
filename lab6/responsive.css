@@ -20,7 +20,7 @@ body {
 main {
     display: grid;
     grid-template-columns: 1fr; /* uma coluna por padrão */
-    gap: 20px; /* espaçamento entre os elementos */
+    gap: 20px; 
     padding: 20px;
     margin: 0 50px;
 }
@@ -36,24 +36,25 @@ main {
 
 
 /* Media Queries */
-@media (max-width: 768px) { /* Tablets e dispositivos móveis */
+@media only screen and (max-width: 767px) { /* mobile */
     main {
-        grid-template-columns: 1fr; /* uma coluna em dispositivos menores */
+        grid-template-columns: 1fr; 
         margin: 40px auto;
     }
 
+
     .fotosheader {
-        display: flex; /* Usa Flexbox para centralizar as imagens */
-        justify-content: center; /* Centraliza as imagens horizontalmente */
-        flex-direction: column; /* Coloca as imagens em uma coluna */
-        align-items: center; /* Centraliza as imagens verticalmente */
-        gap: 20px; /* Aumenta o espaçamento entre as imagens */
-        margin: 20px 0; /* Aumenta o espaçamento entre o aside e o main */
+        display: flex; 
+        justify-content: center; 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        margin: 20px 0; 
     }
 
     .fotosheader img {
-        max-width: 100%; /* Garante que as imagens sejam responsivas */
-        height: auto; /* Mantém a proporção das imagens */
+        max-width: 100%; 
+        height: auto; 
     }
 
     .menubtn { 
@@ -66,7 +67,7 @@ main {
         margin: 0;
         cursor: pointer;
         display: inline-block; 
-        transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+        transition: background-color 0.3s ease; 
     }
     
 
@@ -78,7 +79,7 @@ main {
 
     
     .menuconteudo {
-        display: none; /* Começa escondido */
+        display: none; 
         position: absolute;
         left: 0; 
         background-color: rgb(52, 49, 49);
@@ -94,17 +95,17 @@ main {
     }
     
     .menuconteudo a:hover {
-        background-color: rgb(80, 80, 80); /* Muda a cor de fundo ao passar o mouse */
-        color: rgb(208, 40, 40); /* Muda a cor do texto ao passar o mouse */
+        background-color: rgb(80, 80, 80); 
+        color: rgb(208, 40, 40); 
     }
     
     .menubtn:hover {
-        background-color: rgb(80, 80, 80); /* Cor do botão ao passar o mouse */
-        color: rgb(246, 1, 1); /* Muda a cor do texto do botão ao passar o mouse */
+        background-color: rgb(80, 80, 80); 
+        color: rgb(246, 1, 1); 
     }
     
     .menubtn:hover + .menuconteudo,
-    .menuconteudo:hover { /* Modificado para que o menu permaneça visível ao passar o mouse sobre ele */
+    .menuconteudo:hover { 
         display: block;
     }
 
@@ -113,7 +114,7 @@ main {
     }
 }
 
-@media (max-width: 480px) { /* Mobile Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1023px) { /* tablet */
     h1 {
         font-size: 40px; /* tamanho do texto em telas pequenas */
     }
@@ -122,37 +123,103 @@ main {
         font-size: 20px; /* reduzindo o tamanho do texto */
     }
 
-    /* Outros ajustes conforme necessário */
-    /* Exemplo: Reduzir o padding e margin para pequenos dispositivos */
+    
     main {
         padding: 10px;
+        gap: 20px; 
     }
 
+
     img {
-        width: 100%; /* imagens responsivas */
+        width: 100%; 
         height: auto;
     }
 
-    /* Ajuste dos links e botões */
+    
     a {
         font-size: 16px; /* tamanho do texto dos links */
         padding: 5px;
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) { /* Laptops */
+@media (min-width: 1024px) and (max-width: 2559px) { /* laptops */
     h1 {
-        font-size: 60px; /* tamanho do texto em telas médias */
+        font-size: 60px; 
+    }
+
+    
+    body {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "aside main"
+            "footer footer"; 
+        grid-template-columns: 1fr 3fr; 
+        grid-template-rows: auto auto 1fr auto; 
+        gap: 20px;
+        min-height: 100vh; 
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+        padding: 15px;
+    }
+
+    aside {
+        grid-area: aside;
+        padding: 20px;
+    }
+
+    main {
+        grid-area: main;
+        padding: 20px;
+    }
+
+    footer {
+        grid-area: footer;
+        padding: 20px;
     }
 }
 
 @media (min-width: 2560px) { /* 4K */
     h1 {
-        font-size: 120px; /* tamanho do texto para telas 4K */
+        font-size: 120px; 
+    }
+
+    
+    body {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "nav nav"
+            "aside main"
+            "footer footer"; 
+        grid-template-columns: 1fr 3fr; 
+        grid-template-rows: auto auto 1fr auto;
+        gap: 40px; 
+        min-height: 100vh; 
     }
 
     main {
-        margin: 0 auto; /* centralizar o main */
-        max-width: 1200px; /* largura máxima para o main */
+        grid-area: main;
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 40px; 
+    }
+
+    header, nav, footer {
+        grid-column: span 2; 
+    }
+
+    aside {
+        grid-area: aside;
+        padding: 40px;
     }
 }
+
+
