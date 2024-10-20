@@ -21,10 +21,9 @@ h1 {
     color: white
 }
 
+
 h2 {
     color: white;
-    text-align: center;
-    margin: 20px 0;
 }
 
 h7{
@@ -223,11 +222,9 @@ body{
     background-color: rgb(37, 35, 34);
 }
 
-.loctext {
+.loctext{
     color: white;
-    text-align: center; /* Centraliza o texto dentro da loctext */
-    margin: 20px auto; /* Adiciona espaçamento automático nas laterais para centralização */
-    width: fit-content; /* Ajusta a largura para caber o conteúdo */
+    padding: 20px 50px 50px 20px;
 }
 
 fieldset{
