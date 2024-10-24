@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+}
+
+header {
+    grid-area: header-area;
+}
+
+nav {
+    grid-area: menu-area;
+}
+
+aside {
+    grid-area: aside-area;
+}
+
+main {
+    grid-area: main-area;
+}
+
+footer {
+    grid-area: footer-area;
+}
+
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+    body {
+        background-color: rgb(231, 222, 222);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'header-area'
+            'aside-area'
+            'main-area'
+            'menu-area'
+            'footer-area';
+    }
+
+    header{
+        grid-area: header-area;
+        background-color: rgb(204, 201, 201);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+    aside{
+        grid-area: aside-area;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: relative;
+        background-color: white;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 20px;
+        
+    }
+
+
+    main {
+        grid-area: main-area;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding-left: 10px;
+        font-size:13px ;
+    }
+
+    main li{
+        font-size: 10px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3px;
+        justify-content: center;
+        grid-area: menu-area;
+        background-color: rgb(255, 255, 255);
+        padding-left: 10px;
+        margin-top: 10px;
+        height: 300px;
+        padding-top: 10;
+    }
+
+
+    .defesa{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3px;
+        justify-content: center;
+        grid-area: menu-area;
+        background-color: rgb(255, 255, 255);
+        padding-left: 10px;
+        margin-top: 5px;
+        height: auto;
+
+
+    }
+    nav a{
+
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 60px;
+        height: 30px;
+        background-color: #f0e6e6;
+        border-radius: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(2n){
+        background-color: #716c6c;
+    }
+
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+    footer {
+        grid-area: footer-area;
+        background-color: rgb(188, 184, 184);
+        bottom: 0;
+        padding: 14px;
+        font-size: 10px;
+        color: black;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-color: rgb(231, 222, 222);
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+            'header-area header-area'
+            'aside-area aside-area'
+            'main-area menu-area'
+            'footer-area footer-area';
+    }
+
+    header{
+        grid-area: header-area;
+        background-color: rgb(204, 201, 201);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    aside{
+        grid-area: aside-area;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        background-color: white;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 20px;
+        
+    }
+
+    aside img{
+        display: flex;
+        position: absolute;
+        right: 250px;
+        width: 100px;
+        height: 100px;
+    }
+
+    main {
+        grid-area: main-area;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding-left: 10px;
+        font-size:13px ;
+        margin-right: 10px;
+    }
+    main li{
+        font-size: 10px;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-area: menu-area;
+        background-color: rgb(255, 255, 255);
+        padding-left: 10px;
+        margin-top: 10px;
+        justify-content: center;
+        height: 300px;
+        padding-top: 10;
+    }
+
+
+    .defesa{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3px;
+        justify-content: center;
+        grid-area: menu-area;
+        background-color: rgb(255, 255, 255);
+        padding-left: 10px;
+        margin-top: 10px;
+        height: auto;
+
+
+    }
+
+    nav a{
+
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 60px;
+        height: 30px;
+        background-color: #f0e6e6;
+        border-radius: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(2n){
+        background-color: #716c6c;
+    }
+
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+    footer {
+        grid-area: footer-area;
+        background-color: rgb(188, 184, 184);
+        bottom: 0;
+        padding: 14px;
+        font-size: 10px;
+        color: black;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+/*portÃ¡til*/
+@media only screen and (min-width: 1024px) and (max-width: 2559px) {
+    body {
+        background-color: rgb(231, 222, 222);
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        grid-template-areas:
+            'header-area header-area'
+            'aside-area aside-area'
+            'main-area menu-area'
+            'footer-area footer-area';
+    }
+
+    header{
+        grid-area: header-area;
+        background-color: rgb(204, 201, 201);
+        border-radius: 5px;
+    }
+
+    header h1{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    aside{
+        grid-area: aside-area;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        background-color: white;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 20px;
+        padding-left: 300px ;
+    }
+
+    aside img{
+        display: flex;
+        position: absolute;
+        right: 250px;
+        width: 100px;
+        height: 100px;
+    }
+
+    
+    main {
+        grid-area: main-area;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding-left: 10px;
+        font-size:13px ;
+        margin-right: 10px;
+    }
+    main li{
+        font-size: 10px;
+    }
+    nav{
+        grid-area: menu-area;
+        background-color: rgb(255, 255, 255);
+        padding-left: 10px;
+        margin-top: 10px;
+        justify-content: center;
+        height: 300px;
+        padding-top: 10;
+    }
+
+    .defesa{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3px;
+        justify-content: center;
+        grid-area: menu-area;
+        background-color: rgb(255, 255, 255);
+        padding-left: 10px;
+        margin-top: 10px;
+        height: auto;
+
+
+    }
+
+    nav a{
+
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: #333;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction:row;
+        width: 60px;
+        height: 30px;
+        background-color: #f0e6e6;
+        border-radius: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(2n){
+        background-color: #716c6c;
+    }
+
+    nav a:hover{
+        background-color: #1d1c1c;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+    footer {
+        grid-area: footer-area;
+        background-color: rgb(201, 196, 196);
+        bottom: 0;
+        padding: 14px;
+        font-size: 10px;
+        color: black;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
