@@ -6,6 +6,7 @@ const btnSubmit = document.getElementById('btnSubmit');
 const corInput = document.getElementById('corInput');
 const btnContador = document.getElementById('btnContador');
 const contador = document.getElementById('contador');
+const hoverText = document.getElementById('hoverText');
 
 function mudarCor(color) {
     corTexto.style.color = color;
@@ -25,3 +26,14 @@ btnContador.addEventListener('click', () => {
     count += 1;
     contador.textContent = count;
 });
+
+function textoHover() {
+    hoverText.textContent = 'Obrigado, volte sempre';
+}
+
+function restaurarTexto() {
+    hoverText.textContent = 'Passa por aqui';
+}
+
+hoverText.addEventListener('mouseover', textoHover);
+hoverText.addEventListener('mouseout', restaurarTexto);
