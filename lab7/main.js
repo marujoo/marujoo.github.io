@@ -16,10 +16,12 @@ btnRed.addEventListener('click', () => mudarCor('red'));
 btnGreen.addEventListener('click', () => mudarCor('green'));
 btnBlue.addEventListener('click', () => mudarCor('blue'));
 
-btnSubmit.addEventListener('click', () => {
-    const color = corInput.value;
-    document.body.style.backgroundColor = color;
-});
+function mudarCorDeFundo() {
+    const color = corInput.value; 
+    document.body.style.backgroundColor = color; 
+}
+
+btnSubmit.addEventListener('click', mudarCorDeFundo);
 
 let count = 0;
 btnContador.addEventListener('click', () => {
