@@ -17,7 +17,7 @@ li{
 button{
     background-color: rgb(167, 167, 181);
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px;
     margin-left: 10px;
     padding: 10px;
@@ -32,5 +32,5 @@ input{
     border: 2px solid black;
     padding-left: 10px;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
