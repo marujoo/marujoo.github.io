@@ -14,9 +14,9 @@ function mudarCor(color) {
     corTexto.style.color = color;
 }
 
-btnRed.addEventListener('click', () => mudarCor('red'));
-btnGreen.addEventListener('click', () => mudarCor('green'));
-btnBlue.addEventListener('click', () => mudarCor('blue'));
+btnRed.addEventListener('click', function() { mudarCor('red'); });
+btnGreen.addEventListener('click', function() { mudarCor('green'); });
+btnBlue.addEventListener('click', function() { mudarCor('blue'); });
 
 function mudarCorDeFundo() {
     const color = document.querySelector('#corInput').value; 
@@ -24,7 +24,7 @@ function mudarCorDeFundo() {
 }
 
 
-btnContador.addEventListener('click', () => {
+btnContador.addEventListener('click', function() {
     count += 1;
     contador.textContent = count;
 });
