@@ -50,3 +50,27 @@ background.addEventListener('keyup', muda_aleatorio);
 
 hoverText.addEventListener('mouseover', textoHover);
 hoverText.addEventListener('mouseout', restaurarTexto);
+
+let counter = 2; 
+function count1() {
+    counter++;
+    document.querySelector('#autoCounter').textContent = counter;
+}
+setInterval(count1, 100);
+
+document.querySelector('#submitBtn').addEventListener('click', function() {
+    
+    const nome = document.querySelector('#nome').value;
+    const idade = document.querySelector('#idade').value;
+
+    if (nome && idade) {
+        
+        const mensagem = `Olá, o ${nome} tem ${idade}!`;
+        document.querySelector('#mensagem').textContent = mensagem;
+
+    } else {
+        document.querySelector('#mensagem').textContent = "Por favor, insira seu nome e idade.";
+    }
+});
+
+

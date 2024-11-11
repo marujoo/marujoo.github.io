@@ -13,17 +13,41 @@
             <li><a href="/index.html">Landing Page</a></li>
             <li><a href="eventossimples.html">Eventos Simples</a></li>
             <li><a href="eventos.html">Página de Eventos</a></li>
-
         </ul>
     </nav>
     
     <ol>
-        <li id="hoverText">Passa por aqui</li>
-        <li><h7 id="corTexto">Pinta-me!</h7><button id="btnRed">Red</button><button id="btnGreen">Green</button><button id="btnBlue">Blue</button></li>
-        <li>Experimenta escrever... <input type="text-area" id="background"></li>
-        <li>Escolha uma cor em inglês: <input type="text" id="corInput"> <button onclick="mudarCorDeFundo()">Submeter</button></li>
-        <li><button id="btnContador">Click Me!</button> <h7 id="contador">0</h7></li>
+        <li id="hoverText">Passa por aqui!</li>
+        
+        <li>
+            <h7 id="corTexto">Pinta-me</h7>
+            <button id="btnRed">Red</button>
+            <button id="btnGreen">Green</button>
+            <button id="btnBlue">Blue</button>
+        </li>
+        
+        <li>Experimenta escrever... <input type="text" id="background"></li>
+        
+        <li>Escolha uma cor: 
+            <select id="colorSelect">
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+        </li>
+        
+        <li> <button id="btnContador">Conta!</button> <h7 id="contador">0</h7></li>
+        
+        <li>
+            <input type="text" placeholder="Insira o seu nome">
+            <input type="text" placeholder="Insira a sua idade">
+            <button id="submitBtn">Submit</button>
+            <p id="mensagem"></p>
+        </li>
+        
+        <li>Automatic Counter: <p id="autoCounter">0</p></li>
     </ol>
+    
     <script src="main.js"></script>
 </body>
-</html>
+</html> 
