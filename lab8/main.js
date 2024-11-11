@@ -2,7 +2,6 @@ const corTexto = document.querySelector('#corTexto');
 const btnRed = document.querySelector('#btnRed');
 const btnGreen = document.querySelector('#btnGreen');
 const btnBlue = document.querySelector('#btnBlue');
-const corInput = document.querySelector('#corInput');
 const btnContador = document.querySelector('#btnContador');
 const contador = document.querySelector('#contador');
 const hoverText = document.querySelector('#hoverText');
@@ -18,10 +17,9 @@ btnRed.addEventListener('click', () => mudarCor('red'));
 btnGreen.addEventListener('click', () => mudarCor('green'));
 btnBlue.addEventListener('click', () => mudarCor('blue'));
 
-function mudarCorDeFundo() {
-    const color = document.querySelector('#corInput').value; 
-    document.body.style.backgroundColor = color; 
-}
+document.querySelector('#colorSelect').onchange = function() {
+    document.body.style.backgroundColor = this.value;
+};
 
 
 btnContador.addEventListener('click', () => {
@@ -56,7 +54,7 @@ function count1() {
     counter++;
     document.querySelector('#autoCounter').textContent = counter;
 }
-setInterval(count1, 100);
+setInterval(count1, 10);
 
 document.querySelector('#submitBtn').addEventListener('click', function() {
     
