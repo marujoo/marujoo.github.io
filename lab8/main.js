@@ -13,9 +13,12 @@ function mudarCor(color) {
     corTexto.style.color = color;
 }
 
-btnRed.addEventListener('click', () => mudarCor('red'));
-btnGreen.addEventListener('click', () => mudarCor('green'));
-btnBlue.addEventListener('click', () => mudarCor('blue'));
+    document.querySelectorAll("button[data-color]").forEach(function(button) {
+        button.addEventListener('click', function() {
+            const color = button.dataset.color;
+            corTexto.style.color = color;
+        });
+    });
 
 document.querySelector('#colorSelect').onchange = function() {
     document.body.style.backgroundColor = this.value;
@@ -54,7 +57,7 @@ function count1() {
     counter++;
     document.querySelector('#autoCounter').textContent = counter;
 }
-setInterval(count1, 10);
+setInterval(count1, 100);
 
 document.querySelector('#submitBtn').addEventListener('click', function() {
     
