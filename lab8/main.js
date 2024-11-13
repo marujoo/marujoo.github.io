@@ -9,16 +9,13 @@ const background = document.querySelector('#background');
 let random = 0;
 let count = 0;
 
-function mudarCor(color) {
-    corTexto.style.color = color;
-}
 
-    document.querySelectorAll("button[data-color]").forEach(function(button) {
-        button.addEventListener('click', function() {
-            const color = button.dataset.color;
-            corTexto.style.color = color;
-        });
+document.querySelectorAll("button[data-color]").forEach(function(button) {
+    button.addEventListener('click', function() {
+        const color = button.dataset.color;
+        corTexto.style.color = color;
     });
+});
 
 document.querySelector('#colorSelect').onchange = function() {
     document.body.style.backgroundColor = this.value;
@@ -59,19 +56,22 @@ function count1() {
 }
 setInterval(count1, 100);
 
-document.querySelector('#submitBtn').addEventListener('click', function() {
-    
-    const nome = document.querySelector('#nome').value;
-    const idade = document.querySelector('#idade').value;
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.querySelector('#formulario');
+    const mensagem = document.querySelector('#mensagem');
 
-    if (nome && idade) {
-        
-        const mensagem = `Olá, o ${nome} tem ${idade}!`;
-        document.querySelector('#mensagem').textContent = mensagem;
+    formulario.onsubmit = function(e) {
+        e.preventDefault(); 
 
-    } else {
-        document.querySelector('#mensagem').textContent = "Por favor, insira seu nome e idade.";
-    }
+        const nome = document.querySelector('#nome').value;
+        const idade = document.querySelector('#idade').value;
+
+        if (nome && idade) {
+            mensagem.textContent = `Olá, o ${nome} tem ${idade}!`;
+        } else {
+            mensagem.textContent = "Por favor, insira seu nome e idade.";
+        }
+    };
 });
 
 

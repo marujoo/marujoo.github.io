@@ -20,13 +20,13 @@
         <li id="hoverText">Passa por aqui!</li>
         
         <li>
-            <h7 id="corTexto">Pinta-me</h7>
+            <p><h7 id="corTexto">Pinta-me</h7></p>
             <button id="btnRed" data-color="red">Red</button>
             <button id="btnGreen" data-color="green"="">Green</button>
             <button id="btnBlue" data-color="blue">Blue</button>
         </li>
         
-        <li>Experimenta escrever... <input type="text" id="background"></li>
+        <li>Experimenta escrever... <p><input type="text" id="background"></p></li>
         
         <li>Escolha uma cor: 
             <select id="colorSelect">
@@ -39,11 +39,13 @@
         <li> <button id="btnContador">Conta!</button> <h7 id="contador">0</h7></li>
         
         <li>
-            <input type="text" placeholder="Insira o seu nome">
-            <input type="text" placeholder="Insira a sua idade">
-            <button id="submitBtn">Submit</button>
-            <p id="mensagem"></p>
+        <form id="formulario">
+            <input type="text" id="nome" placeholder="Insira o seu nome">
+            <input type="text" id="idade" placeholder="Insira a sua idade">
+            <button type="submit" id="submitBtn">Submit</button>
+        </form> 
         </li>
+        <p id="mensagem"></p>
         
         <li>Automatic Counter: <p id="autoCounter">0</p></li>
     </ol>
