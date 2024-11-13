@@ -27,6 +27,8 @@ btnContador.addEventListener('click', () => {
     contador.textContent = count;
 });
 
+btnContador.addEventListener('click', incrementarCount);
+
 function textoHover() {
     hoverText.textContent = 'Obrigado, volte sempre';
 }
@@ -73,5 +75,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 });
+
+if (!localStorage.getItem('contador')) {
+    localStorage.setItem('contador', 0);
+}
+
+function incrementarCount() {
+    let contador = parseInt(localStorage.getItem('contador')); 
+    contador++;
+    document.querySelector('#contador').textContent = contador; 
+    localStorage.setItem('contador', contador); 
+}
+document.querySelector('#contador').textContent = localStorage.getItem('contador');
 
 
