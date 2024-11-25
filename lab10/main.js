@@ -142,3 +142,66 @@ function restaurarCesto() {
         });
     }
 }
+
+
+function filtrarPorCategoria() {
+    const categoria = document.getElementById('categoria-select').value;
+    
+    fetch('https://deisishop.pythonanywhere.com/products/')
+        .then(response => response.json())
+        .then(produtos => {
+            const produtosFiltrados = categoria 
+                ? produtos.filter(p => p.category === parseInt(categoria))
+                : produtos;
+                
+            const produtosContainer = document.querySelector('.produtos');
+            produtosContainer.innerHTML = '';
+            produtosFiltrados.forEach(produto => {
+                produtosContainer.appendChild(criarProduto(produto));
+            });
+        });
+}
+
+// Sort by price
+function ordenarPorPreco() {
+    const ordem = document.getElementById('ordem-select').value;
+    
+    fetch('https://deisishop.pythonanywhere.com/products/')
+        .then(response => response.json())
+        .then(produtos => {
+            if (ordem === 'asc') {
+                produtos.sort((a, b) => a.price - b.price);
+            } else if (ordem === 'desc') {
+                produtos.sort((a, b) => b.price - a.price);
+            }
+            
+            const produtosContainer = document.querySelector('.produtos');
+            produtosContainer.innerHTML = '';
+            produtos.forEach(produto => {
+                produtosContainer.appendChild(criarProduto(produto));
+            });
+        });
+}
+
+// Search by name
+function procurarPorNome() {
+    const termoPesquisa = document.getElementById('pesquisa-input').value.toLowerCase();
+    
+    fetch('https://deisishop.pythonanywhere.com/products/')
+        .then(response => response.json())
+        .then(produtos => {
+            const produtosFiltrados = produtos.filter(produto => 
+                produto.title.toLowerCase().includes(termoPesquisa)
+            );
+            
+            const produtosContainer = document.querySelector('.produtos');
+            produtosContainer.innerHTML = '';
+            produtosFiltrados.forEach(produto => {
+                produtosContainer.appendChild(criarProduto(produto));
+            });
+        });
+}
+
+document.getElementById('categoria-select').addEventListener('change', filtrarPorCategoria);
+document.getElementById('ordem-select').addEventListener('change', ordenarPorPreco);
+document.getElementById('pesquisa-input').addEventListener('input', procurarPorNome);
