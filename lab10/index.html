@@ -20,6 +20,31 @@
     <main>
         <section id="produtos">
             <h2>Selecione os seus Produtos</h2>
+            <form class="filtro-produtos">
+                <section class="filtro">
+                    <label for="categoria-select">Filtrar</label>
+                    <select id="categoria-select" name="categoria">
+                        <option value="">Todas as categorias</option>
+                        <option value="1">T-shirts</option>
+                        <option value="2">Canecas</option>
+                        <option value="3">Meias</option>
+                    </select>
+                </section>
+        
+                <section class="filtro">
+                    <label for="ordem-select">Ordenar</label>
+                    <select id="ordem-select" name="ordem">
+                        <option value="">Ordenar pelo preço</option>
+                        <option value="asc">Menor preço</option>
+                        <option value="desc">Maior preço</option>
+                    </select>
+                </section>
+        
+                <section class="filtro">
+                    <label for="pesquisa-input">Procurar</label>
+                    <input type="text" id="pesquisa-input" name="pesquisa" placeholder="Pesquise por produto">
+                </section>
+            </form>
             <article class="produtos">
             </article>
         </section>
@@ -36,7 +61,6 @@
         2024
     </footer>
 
-    <script src="produtos.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

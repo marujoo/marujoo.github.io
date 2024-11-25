@@ -1,11 +1,10 @@
-// init quando o DOM carrega
 document.addEventListener('DOMContentLoaded', () => {
-    carregarProdutos(produtos);
+    // obter os produtos da API e carregar no DOM
+    fetchProdutos();
     restaurarCesto();
 });
 
-
-// nicializar localStorage se nao existir
+// inicializar localStorage se não existir
 if (!localStorage.getItem('produtos-selecionados')) {
     localStorage.setItem('produtos-selecionados', JSON.stringify([]));
 }
@@ -13,18 +12,33 @@ if (!localStorage.getItem('produtos-selecionados')) {
 let produtosSelecionados = [];
 let custoTotal = 0;
 
+// func para dar fetch nos produtos da API
+function fetchProdutos() {
+    fetch('https://deisishop.pythonanywhere.com/products/')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar os produtos da API');
+            }
+            return response.json(); // converter para json
+        })
+        .then(produtos => {
+            carregarProdutos(produtos); // carregar os produtos no DOM
+        })
+        .catch(erro => {
+            console.error('Erro ao obter os produtos:', erro);
+        });
+}
 
-// func para carregar produtos no DOM
+// func para carregar os produtos no DOM
 function carregarProdutos(produtos) {
     const produtosContainer = document.querySelector('.produtos');
     produtos.forEach(produto => {
-        console.log(`ID: ${produto.id}, Title: ${produto.title}`);
         const artigoProduto = criarProduto(produto);
         produtosContainer.appendChild(artigoProduto);
     });
 }
 
-// func para criar um produto
+// func para criar um produto no DOM
 function criarProduto(produto) {
     const artigo = document.createElement('article');
     artigo.className = 'produto-card';
@@ -48,13 +62,9 @@ function criarProduto(produto) {
     botaoAdicionar.textContent = '+ Adicionar ao Cesto';
     botaoAdicionar.className = 'adicionar-btn';
     botaoAdicionar.addEventListener('click', () => {
-        // Obter lista atual do localStorage
         produtosSelecionados = JSON.parse(localStorage.getItem('produtos-selecionados'));
-        // add novo produto a lista
         produtosSelecionados.push(produto);
-        // guardar lista atualizada no localStorage
         localStorage.setItem('produtos-selecionados', JSON.stringify(produtosSelecionados));
-        // atualizar a visualizacao do cesto
         criaProdutoCesto(produto);
     });
 
@@ -71,7 +81,7 @@ function criarProduto(produto) {
     return artigo;
 }
 
-// func para criar produto no cesto
+// func para criar um produto no cesto
 function criaProdutoCesto(produto) {
     const cestoContainer = document.querySelector('.produtos-cesto');
     
@@ -103,7 +113,7 @@ function criaProdutoCesto(produto) {
     atualizarCustoTotal();
 }
 
-// func para remover produto do cesto
+// func para remover um produto do cesto
 function removerDoCesto(produto, elementoCesto) {
     const index = produtosSelecionados.findIndex(p => p.id === produto.id);
     
@@ -132,4 +142,3 @@ function restaurarCesto() {
         });
     }
 }
-
