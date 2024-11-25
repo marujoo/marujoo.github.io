@@ -89,6 +89,10 @@ section {
     margin: 16px 0;  
 }
 
+.produto-card:hover {
+    transform: scale(1.01);
+}
+
 .conteiner-descricao-botao {
     width: 100%;
     display: flex;

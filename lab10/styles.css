@@ -124,6 +124,10 @@ section {
     margin: 16px 0;  
 }
 
+.produto-card:hover {
+    transform: scale(1.01);
+}
+
 .conteiner-descricao-botao {
     width: 100%;
     display: flex;
@@ -193,10 +197,12 @@ button.remover-btn {
     cursor: pointer;
     width: 100%; 
     color: white;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 button.remover-btn:hover {
-    background-color: #a01523;
+    background-color: #c62828;
 }
 
 .preco {
@@ -215,6 +221,44 @@ button.remover-btn:hover {
     width: fit-content; 
     text-align: center;
 }
+
+.checkout {
+    background-color: #e9e3e3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+ }
+ 
+ .checkout input[type="text"] {
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+ }
+ 
+ .checkout button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 20px;
+    transition: all 0.3s ease;
+ }
+ 
+ .checkout button:hover {
+    background-color: #95d38a;
+ }
+ 
+ #precofinal, #referencia {
+    margin: 10px 0;
+    font-weight: bold;
+ }
 
 
 footer {
