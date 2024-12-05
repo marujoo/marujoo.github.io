@@ -214,7 +214,7 @@ function processaPagamento() {
             document.getElementById('referencia').textContent = 
                 `Referência de pagamento: ${dados.reference}`;
             document.getElementById('nome').textContent =
-                `Excelente compra ${dados.example}`;    
+                `Excelente compra ${dados.name}`;    
             
             localStorage.setItem('produtos-selecionados', '[]');
             document.querySelector('.produtos-cesto').innerHTML = '';
