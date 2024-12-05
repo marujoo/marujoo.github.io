@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="icon" href="deisiLogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Xexexe™</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#cesto">Cesto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="container">
+            <h2>Selecione os seus Produtos</h2>
+            
+            <form class="filtro-produtos">
+                <section class="filtro">
+                    <label for="categoria-select">Filtrar</label>
+                    <select id="categoria-select" name="categoria">
+                    </select>
+                </section>
+        
+                <section class="filtro">
+                    <label for="ordem-select">Ordenar</label>
+                    <select id="ordem-select" name="ordem">
+                        <option value="">Ordenar pelo rating</option>
+                        <option value="asc">Menor rating</option>
+                        <option value="desc">Maior rating</option>
+                    </select>
+                </section>
+        
+                <section class="filtro">
+                    <label for="pesquisa-input">Procurar</label>
+                    <input type="text" id="pesquisa-input" name="pesquisa" placeholder="Pesquise por produto">
+                </section>
+                
+                <section>
+                    <button id="remover-todos"> Remover tudo do carrinho </button>
+                </section>
+
+                <section>
+                    <button id="remover-descricao"> Menos info </button>
+                </section>
+            </form>
+            
+           
+            
+            <article class="produtos">
+            </article>
+            
+            <section id="cesto">
+                <h3>Produtos Selecionados</h3>
+                <h4 id="custo-total">Custo total: 0.00 €</h4>
+                <article class="produtos-cesto">
+                </article>
+                
+                <section class="checkout">
+                    <p>És estudante do DEISI? 
+                        <input type="checkbox" id="estudante-checkbox">
+                    </p>
+                    <p>Cupão de desconto:
+                        <input type="text" id="desconto-cupao">
+                    </p>
+                    <p> Nome:
+                        <input type="text" id="nome">
+                    </p>
+                    <button id="btn-comprar">Comprar</button>
+                    <p id="precofinal"></p>
+                    <p id="referencia"></p>
+                    <p id="nome"></p>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        2024
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
