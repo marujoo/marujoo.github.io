@@ -58,6 +58,7 @@ function filtrarEAtualizarProdutos(produtos) {
     carregarProdutos(produtosFiltrados);
 }
 
+
 function carregarProdutos(produtos) {
     const produtosContainer = document.querySelector(".produtos");
     produtosContainer.innerHTML = '';
